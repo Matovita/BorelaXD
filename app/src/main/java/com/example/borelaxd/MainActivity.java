@@ -8,6 +8,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -17,9 +28,7 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button info;
-    private Button important;
-    private Button news;
+    private Button info, stats, news;
     private TextView infected;
     private ImageButton fetch;
 
@@ -28,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         info = (Button) findViewById(R.id.infoBtn);
-        important = (Button) findViewById(R.id.importantBtn);
+        stats = (Button) findViewById(R.id.statsBtn);
         news = (Button) findViewById(R.id.newsBtn);
         infected = (TextView)findViewById(R.id.infectedNum);
         fetch = (ImageButton)findViewById(R.id.refreshBtn);
@@ -41,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        important.setOnClickListener(new View.OnClickListener() {
+        stats.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), ImportantActivity.class);
+                Intent startIntent = new Intent(getApplicationContext(), StatsActivity.class);
                 startActivity(startIntent);
             }
         });
@@ -60,35 +69,49 @@ public class MainActivity extends AppCompatActivity {
         fetch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                        getBodyText();
-                    }
+                //fetch.set
+                getBodyText();
+            }
         });
     }
 
     public void getBodyText() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                final StringBuilder builder = new StringBuilder();
+        {
+            String url = "https://corona.lmao.ninja/v2/all";
 
-                try {
-                    String url = "https://www.worldometers.info/coronavirus/";
-                    Document doc = Jsoup.connect(url).get();
+            StringRequest request
+                    = new StringRequest(
+                    Request.Method.GET,
+                    url,
+                    new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+                            try {
+                                JSONObject jsonObject
+                                        = new JSONObject(
+                                        response.toString());
+                                infected.setText(
+                                        jsonObject.getString(
+                                                "cases"));
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    },
+                    new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Toast.makeText(
+                                    MainActivity.this,
+                                    error.getMessage(),
+                                    Toast.LENGTH_SHORT)
+                                    .show();
+                        }
+                    });
 
-                    Elements body = doc.select("div.maincouter-wrap > maincouter-number > span");
-                    Double rate = Double.valueOf(body.get(0).text());
-                    builder.append(rate);
-                } catch (Exception e) {
-                    builder.append("Error : ").append(e.getMessage()).append("\n");
-                }
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        infected.setText(builder.toString());
-                    }
-                });
-            }
-        }).start();
+            RequestQueue requestQueue
+                    = Volley.newRequestQueue(this);
+            requestQueue.add(request);
+        }
     }
 }

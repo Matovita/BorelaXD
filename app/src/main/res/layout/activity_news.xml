@@ -6,16 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".NewsActivity">
 
-    <EditText
+    <TextView
         android:id="@+id/newsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="                  News"
+        android:text="Wiadomości"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -50,7 +52,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Date 1"
+                        android:text="Data 1"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -60,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Article title 1"
+                        android:text="Tytuł artykułu 1"
                         android:textSize="18dp" />
 
                 </LinearLayout>
@@ -70,7 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="127dp"
                     android:paddingLeft="5dp"
-                    android:text="News 1"
+                    android:text="Wiadomość 1"
                     android:textSize="16dp" />
 
             </LinearLayout>
@@ -91,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Date 2"
+                        android:text="Data 2"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -101,7 +103,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Article title 2"
+                        android:text="Tytuł artykułu 2"
                         android:textSize="18dp" />
 
                 </LinearLayout>
@@ -111,7 +113,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="127dp"
                     android:paddingLeft="5dp"
-                    android:text="News 2"
+                    android:text="Wiadomość 2"
                     android:textSize="16dp" />
 
             </LinearLayout>
@@ -132,7 +134,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Date 3"
+                        android:text="Data 3"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -142,7 +144,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Article title 3"
+                        android:text="Tytuł artykułu 3"
                         android:textSize="18dp" />
 
                 </LinearLayout>
@@ -152,7 +154,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="127dp"
                     android:paddingLeft="5dp"
-                    android:text="News 3"
+                    android:text="Wiadomość 3"
                     android:textSize="16dp" />
 
             </LinearLayout>
@@ -173,7 +175,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Date 4"
+                        android:text="Data 4"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -183,7 +185,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Article title 4"
+                        android:text="Tytuł artykułu 4"
                         android:textSize="18dp" />
 
                 </LinearLayout>
@@ -193,7 +195,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="127dp"
                     android:paddingLeft="5dp"
-                    android:text="News 4"
+                    android:text="Wiadomość 4"
                     android:textSize="16dp" />
 
             </LinearLayout>
@@ -214,7 +216,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Date 5"
+                        android:text="Data 5"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -224,7 +226,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Article title 5"
+                        android:text="Tytuł artykułu 5"
                         android:textSize="18dp" />
 
                 </LinearLayout>
@@ -234,7 +236,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="127dp"
                     android:paddingLeft="5dp"
-                    android:text="News 5"
+                    android:text="Wiadomość 5"
                     android:textSize="16dp" />
 
             </LinearLayout>
@@ -255,7 +257,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Date 6"
+                        android:text="Data 6"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 
@@ -265,7 +267,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:paddingLeft="10dp"
-                        android:text="Article title 6"
+                        android:text="Tytuł artykułu 6"
                         android:textSize="18dp" />
 
                 </LinearLayout>
@@ -275,7 +277,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="127dp"
                     android:paddingLeft="5dp"
-                    android:text="News 6"
+                    android:text="Wiadomość 6"
                     android:textSize="16dp" />
 
             </LinearLayout>
