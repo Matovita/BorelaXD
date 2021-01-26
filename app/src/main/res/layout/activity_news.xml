@@ -4,283 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundv2"
     tools:context=".NewsActivity">
 
     <TextView
         android:id="@+id/newsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="48dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Wiadomości"
-        android:textSize="30dp"
-        android:textStyle="bold"
+        android:text="Najchęstsze Pytania"
         android:textAlignment="center"
-        android:layout_gravity="center_horizontal"
+        android:textSize="40dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="76dp"
+        android:layout_width="412dp"
+        android:layout_height="645dp"
+        android:layout_marginTop="20dp"
+        android:paddingRight="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/newsText"
+        app:layout_constraintVertical_bias="0.058">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingRight="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+            <Button
+                android:id="@+id/q1Btn"
+                android:layout_width="370dp"
+                android:layout_height="160dp"
+                android:text="Jakie są objawy koronawirusa?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal">
+            <Button
+                android:id="@+id/q2Btn"
+                android:layout_width="370dp"
+                android:layout_height="160dp"
+                android:text="Kiedy mogę zrobić test na covid?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                    <TextView
-                        android:id="@+id/dateText1"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Data 1"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
+            <Button
+                android:id="@+id/q3Btn"
+                android:layout_width="370dp"
+                android:layout_height="160dp"
+                android:text="Gdzie znajdę wynik testu na covid?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                    <TextView
-                        android:id="@+id/articleTitleText1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Tytuł artykułu 1"
-                        android:textSize="18dp" />
+            <Button
+                android:id="@+id/q4Btn"
+                android:layout_width="370dp"
+                android:layout_height="160dp"
+                android:text="Co to znaczy, że miałem kontakt z osobą zarażoną?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                </LinearLayout>
+            <Button
+                android:id="@+id/q5Btn"
+                android:layout_width="370dp"
+                android:layout_height="160dp"
+                android:text="Ile trwa kwarantanna?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                <TextView
-                    android:id="@+id/newsText1"
-                    android:layout_width="match_parent"
-                    android:layout_height="127dp"
-                    android:paddingLeft="5dp"
-                    android:text="Wiadomość 1"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/dateText2"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Data 2"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/articleTitleText2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Tytuł artykułu 2"
-                        android:textSize="18dp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/newsText2"
-                    android:layout_width="match_parent"
-                    android:layout_height="127dp"
-                    android:paddingLeft="5dp"
-                    android:text="Wiadomość 2"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/dateText3"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Data 3"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/articleTitleText3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Tytuł artykułu 3"
-                        android:textSize="18dp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/newsText3"
-                    android:layout_width="match_parent"
-                    android:layout_height="127dp"
-                    android:paddingLeft="5dp"
-                    android:text="Wiadomość 3"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/dateText4"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Data 4"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/articleTitleText4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Tytuł artykułu 4"
-                        android:textSize="18dp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/newsText4"
-                    android:layout_width="match_parent"
-                    android:layout_height="127dp"
-                    android:paddingLeft="5dp"
-                    android:text="Wiadomość 4"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/dateText5"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Data 5"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/articleTitleText5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Tytuł artykułu 5"
-                        android:textSize="18dp" />
-
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/newsText5"
-                    android:layout_width="match_parent"
-                    android:layout_height="127dp"
-                    android:paddingLeft="5dp"
-                    android:text="Wiadomość 5"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
+            <Button
+                android:id="@+id/q6Btn"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
-                android:orientation="vertical">
+                android:text="Gdzie mogę dostać więcej informacji na temat kwarantanny?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:orientation="horizontal">
+            <Button
+                android:id="@+id/q7Btn"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:text="W jakich okolicznościach mogę zostać objęty kwarantanną?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                    <TextView
-                        android:id="@+id/dateText6"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Data 6"
-                        android:textSize="20dp"
-                        android:textStyle="bold" />
+            <Button
+                android:id="@+id/q8Btn"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:text="Czy trzeba mieć skierowanie na test na koronawirusa?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                    <TextView
-                        android:id="@+id/articleTitleText6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:paddingLeft="10dp"
-                        android:text="Tytuł artykułu 6"
-                        android:textSize="18dp" />
+            <Button
+                android:id="@+id/q9Btn"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:text="Gdzie mogę zrobić test na covid?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                </LinearLayout>
+            <Button
+                android:id="@+id/q10Btn"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:text="Jak długo ważne jest skierowanie na test?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
 
-                <TextView
-                    android:id="@+id/newsText6"
-                    android:layout_width="match_parent"
-                    android:layout_height="127dp"
-                    android:paddingLeft="5dp"
-                    android:text="Wiadomość 6"
-                    android:textSize="16dp" />
-
-            </LinearLayout>
+            <Button
+                android:id="@+id/q12Btn"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:text="Gdzie mogę się zaszczepić?"
+                android:textColor="#FFFFFF"
+                app:backgroundTint="#0F3650" />
         </LinearLayout>
     </ScrollView>
 

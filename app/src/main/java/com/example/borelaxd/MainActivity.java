@@ -1,12 +1,15 @@
 package com.example.borelaxd;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,11 +29,13 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.w3c.dom.Text;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button info, stats, news;
     private TextView infected;
-    private ImageButton fetch;
+    private ImageButton fetch, appInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         news = (Button) findViewById(R.id.newsBtn);
         infected = (TextView)findViewById(R.id.infectedNum);
         fetch = (ImageButton)findViewById(R.id.refreshBtn);
+        appInfo = (ImageButton)findViewById(R.id.appInfoButton);
 
         info.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,15 +75,22 @@ public class MainActivity extends AppCompatActivity {
         fetch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //fetch.set
                 getBodyText();
             }
+        });
+
+        appInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    startActivity(new Intent(MainActivity.this, Pop.class));
+                }
         });
     }
 
     public void getBodyText() {
         {
             String url = "https://corona.lmao.ninja/v2/all";
+            DecimalFormat formatter = new DecimalFormat("###,###,###");
 
             StringRequest request
                     = new StringRequest(
@@ -87,12 +100,10 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             try {
-                                JSONObject jsonObject
-                                        = new JSONObject(
-                                        response.toString());
-                                infected.setText(
-                                        jsonObject.getString(
-                                                "cases"));
+                                JSONObject jsonObject = new JSONObject(response.toString());
+                                infected.setTextSize(45);
+                                infected.setPadding(10,0,0,20);
+                                infected.setText(formatter.format(Integer.parseInt(jsonObject.getString("active"))));
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }

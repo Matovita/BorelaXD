@@ -2,8 +2,10 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundv2"
     tools:context=".MainActivity">
 
     <Button
@@ -12,6 +14,8 @@
         android:layout_height="82dp"
         android:layout_marginTop="40dp"
         android:text="Globalne Statystyki"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#0F3650"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/infoBtn" />
@@ -20,9 +24,12 @@
         android:id="@+id/infoBtn"
         android:layout_width="190dp"
         android:layout_height="82dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="236dp"
         android:text="Informacje o Państwach"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#0F3650"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,7 +38,9 @@
         android:layout_width="190dp"
         android:layout_height="82dp"
         android:layout_marginTop="40dp"
-        android:text="Nowości"
+        android:text="Pytania pandemiczne"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#0F3650"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statsBtn" />
@@ -40,15 +49,16 @@
         android:id="@+id/infectedNum"
         android:layout_width="322dp"
         android:layout_height="69dp"
+        android:layout_gravity="center_horizontal"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="116dp"
+        android:background="#00000000"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
-        android:textAlignment="center"
-        android:layout_gravity="center_horizontal"
         android:text="LICZBA ZARAŻONYCH"
-        android:textColor="#D30D0D"
+        android:textAlignment="center"
+        android:textColor="#E60D0D"
         android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -58,11 +68,34 @@
         android:id="@+id/refreshBtn"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="124dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toEndOf="@+id/infectedNum"
         app:srcCompat="@android:drawable/stat_notify_sync" />
+
+    <ImageButton
+        android:id="@+id/appInfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:text="CoFeed-19"
+        android:textSize="66dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

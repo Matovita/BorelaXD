@@ -18,18 +18,20 @@ import org.json.JSONObject;
 
 import android.os.Bundle;
 
+import java.text.DecimalFormat;
+
 public class StatsActivity extends AppCompatActivity {
 
-    TextView tvRecovered, tvCritical, tvActive, tvTodayCases, tvTotalDeaths, tvTodayDeaths, tvAffectedCountries;
+    TextView tvCases, tvRecovered, tvCritical, tvActive, tvTodayCases, tvTotalDeaths, tvTodayDeaths, tvAffectedCountries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
+        tvCases = findViewById(R.id.tvCases);
         tvRecovered = findViewById(R.id.tvRecovered);
         tvCritical = findViewById(R.id.tvCritical);
-        tvActive = findViewById(R.id.tvActive);
         tvTodayCases = findViewById(R.id.tvTodayCases);
         tvTotalDeaths = findViewById(R.id.tvTotalDeaths);
         tvTodayDeaths = findViewById(R.id.tvTodayDeaths);
@@ -40,6 +42,7 @@ public class StatsActivity extends AppCompatActivity {
     private void fetchdata()
     {
         String url = "https://corona.lmao.ninja/v2/all";
+        DecimalFormat formatter = new DecimalFormat("###,###,###");
 
         StringRequest request
                 = new StringRequest(
@@ -50,30 +53,14 @@ public class StatsActivity extends AppCompatActivity {
                     public void onResponse(String response)
                     {
                         try {
-                            JSONObject jsonObject
-                                    = new JSONObject(
-                                    response.toString());
-                            tvRecovered.setText(
-                                    jsonObject.getString(
-                                            "recovered"));
-                            tvCritical.setText(
-                                    jsonObject.getString(
-                                            "critical"));
-                            tvActive.setText(
-                                    jsonObject.getString(
-                                            "active"));
-                            tvTodayCases.setText(
-                                    jsonObject.getString(
-                                            "todayCases"));
-                            tvTotalDeaths.setText(
-                                    jsonObject.getString(
-                                            "deaths"));
-                            tvTodayDeaths.setText(
-                                    jsonObject.getString(
-                                            "todayDeaths"));
-                            tvAffectedCountries.setText(
-                                    jsonObject.getString(
-                                            "affectedCountries"));
+                            JSONObject jsonObject = new JSONObject(response.toString());
+                            tvCases.setText(formatter.format(Integer.parseInt(jsonObject.getString("cases"))));
+                            tvRecovered.setText(formatter.format(Integer.parseInt(jsonObject.getString("recovered"))));
+                            tvCritical.setText(formatter.format(Integer.parseInt(jsonObject.getString("critical"))));
+                            tvTodayCases.setText(formatter.format(Integer.parseInt(jsonObject.getString("todayCases"))));
+                            tvTotalDeaths.setText(formatter.format(Integer.parseInt(jsonObject.getString("deaths"))));
+                            tvTodayDeaths.setText(formatter.format(Integer.parseInt(jsonObject.getString("todayDeaths"))));
+                            tvAffectedCountries.setText(formatter.format(Integer.parseInt(jsonObject.getString("affectedCountries"))));
                         }
                         catch (JSONException e) {
                             e.printStackTrace();

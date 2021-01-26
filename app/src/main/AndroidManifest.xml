@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.BorelaXD">
-        <activity android:name=".StatsActivity"></activity>
+        <activity android:name=".AustraliaActivity"></activity>
+        <activity android:name=".AfricaActivity" />
+        <activity android:name=".AsiaActivity" />
+        <activity android:name=".EuropeActivity" />
+        <activity android:name=".SouthAmericaActivity" />
+        <activity android:name=".NorthAmericaActivity" />
+        <activity android:name=".StatsActivity" />
         <activity android:name=".NewsActivity" />
         <activity android:name=".CountriesActivity" />
         <activity android:name=".MainActivity">
@@ -21,6 +27,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Pop"
+            android:theme="@style/Theme.BorelaXD.CustomTheme" />
+        <activity
+            android:name=".PopAnswer"
+            android:theme="@style/Theme.BorelaXD.CustomTheme" />
     </application>
 
 </manifest>

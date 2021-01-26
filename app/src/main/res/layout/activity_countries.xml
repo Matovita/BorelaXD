@@ -4,21 +4,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/worldmap"
     tools:context=".CountriesActivity">
 
     <TextView
         android:id="@+id/titleActivity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="371dp"
+        android:layout_height="68dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Lista państw"
-        android:textSize="30dp"
-        android:textStyle="bold"
+        android:text="Wybierz kontynent"
         android:textAlignment="center"
-        android:layout_gravity="center_horizontal"
+        android:textSize="40dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/nAmericaBtn"
+        android:layout_width="130dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="356dp"
+        android:text="Ameryka Płn."
+        app:backgroundTint="#B49A7F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/sAmericaBtn"
+        android:layout_width="130dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="544dp"
+        android:text="Ameryka Płd."
+        app:backgroundTint="#B49A7F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.257"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/europeBtn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="312dp"
+        android:text="Europa"
+        app:backgroundTint="#B49A7F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/africaBtn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="472dp"
+        android:text="Afryka"
+        app:backgroundTint="#B49A7F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/asiaBtn"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="372dp"
+        android:text="Azja"
+        app:backgroundTint="#B49A7F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/australiaBtn"
+        android:layout_width="144dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="544dp"
+        android:text="Australia i Oceania"
+        app:backgroundTint="#B49A7F"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,6 +103,7 @@
         android:layout_marginTop="80dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,7 +113,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:visibility="visible">
 
             <LinearLayout
                 android:layout_width="match_parent"
