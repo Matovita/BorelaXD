@@ -1,13 +1,13 @@
 package com.example.borelaxd;
 
 import androidx.appcompat.app.AppCompatActivity;
+import android.app.Fragment;
 
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 public class CountriesActivity extends AppCompatActivity {
 
@@ -45,6 +45,9 @@ public class CountriesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent startIntent = new Intent(getApplicationContext(), EuropeActivity.class);
                 startActivity(startIntent);
+                /*Fragment fragment = new EuropeActivity();
+                FragmentManager manager = getFragmentManager();
+                manager.beginTransaction().replace(R.id.contaner, fragment).commit();*/
             }
         });
 

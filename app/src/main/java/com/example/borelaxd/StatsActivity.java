@@ -22,7 +22,7 @@ import java.text.DecimalFormat;
 
 public class StatsActivity extends AppCompatActivity {
 
-    TextView tvCases, tvRecovered, tvCritical, tvActive, tvTodayCases, tvTotalDeaths, tvTodayDeaths, tvAffectedCountries;
+    TextView tvCases, tvRecovered, tvCritical, tvTodayCases, tvTotalDeaths, tvTodayDeaths, tvAffectedCountries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

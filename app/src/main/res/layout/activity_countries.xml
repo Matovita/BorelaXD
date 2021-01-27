@@ -2,10 +2,16 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/worldmap"
     tools:context=".CountriesActivity">
+
+    <FrameLayout
+        android:id="@+id/contaner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <TextView
         android:id="@+id/titleActivity"
@@ -29,7 +35,7 @@
         android:layout_height="75dp"
         android:layout_marginTop="356dp"
         android:text="Ameryka Płn."
-        app:backgroundTint="#B49A7F"
+        app:backgroundTint="#CFB599"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +47,7 @@
         android:layout_height="75dp"
         android:layout_marginTop="544dp"
         android:text="Ameryka Płd."
-        app:backgroundTint="#B49A7F"
+        app:backgroundTint="#CFB599"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +59,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="312dp"
         android:text="Europa"
-        app:backgroundTint="#B49A7F"
+        app:backgroundTint="#CFB599"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +71,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="472dp"
         android:text="Afryka"
-        app:backgroundTint="#B49A7F"
+        app:backgroundTint="#CFB599"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +83,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="372dp"
         android:text="Azja"
-        app:backgroundTint="#B49A7F"
+        app:backgroundTint="#CFB599"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +95,7 @@
         android:layout_height="80dp"
         android:layout_marginTop="544dp"
         android:text="Australia i Oceania"
-        app:backgroundTint="#B49A7F"
+        app:backgroundTint="#CFB599"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.891"
         app:layout_constraintStart_toStartOf="parent"

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">BorelaXD</string>
+
+    <string name="q6String">Najlepiej na oficjalnej rządowej stornie poświęconej koronawirusowi: <a herf="https://www.gov.pl/web/koronawirus">www.gov.pl/web/koronawirus</a></string>
+    <string name="q9String">Warto sprawdzić lokalizację najbliższego punktu badań w swojej okolicy na stronie: <a herf="https://pacjent.gov.pl/aktualnosc/test-w-mobilnym-punkcie-pobran">pacjent.gov.pl/aktualnosc/test-w-mobilnym-punkcie-pobran</a></string>
+    <string name="q12String">Aby sprawdzić lokalizację punktów szczepień należy odwiedzić stronę: <a herf="https://www.gov.pl/web/szczepimysie/mapa-punktow-szczepien#/">www.gov.pl/web/szczepimysie/mapa-punktow-szczepien</a></string>
 </resources>

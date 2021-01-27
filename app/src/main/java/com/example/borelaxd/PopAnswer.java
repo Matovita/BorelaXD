@@ -2,6 +2,7 @@ package com.example.borelaxd;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.util.DisplayMetrics;
 import android.widget.TextView;
 
@@ -27,5 +28,6 @@ public class PopAnswer extends AppCompatActivity {
 
         answer = getIntent().getStringExtra("Answer");
         popAnswer.setText(answer);
+        popAnswer.setMovementMethod(LinkMovementMethod.getInstance());
     }
 }
